@@ -16,11 +16,11 @@ public class LocatorTechnique {
 
 		WebDriver driver = new ChromeDriver();
 		
-		//open facebook.com page, select user email field, enter dummy value in it.
+		//open facebook.com page, select user email field using ID, enter dummy value in it.
 		driver.get("http://facebook.com");
 		driver.findElement(By.id("email")).sendKeys("dummy@email.com");
 		
-		//select passwrod field, enter dummy value
+		//select password field using name, enter dummy value
 		driver.findElement(By.name("pass")).sendKeys("123456");
 		
 		//select the link "forgot password" 
