@@ -32,8 +32,9 @@ public class Demo {
 		
 		//to close the current browser
 		driver.close();
+		
 		//to close all the browsers
-		driver.quit();
+		//driver.quit();
 		
 		
 		
