@@ -1,6 +1,7 @@
 /* This code will open the login.salesforce.com page using .get() method. 
  * Use findElement to locate username (using ID) and password (using name) field, enter some dummy data
  * use xpath to find the login button, then click it.
+ * Xpath format "//tagname[@attribute='value']"
  */
 
 import org.openqa.selenium.By;
@@ -16,10 +17,11 @@ public class LocatorUsingXpath {
 		WebDriver driver = new ChromeDriver();
 		//open salesforce page, select user email & password, enter dummy value in it.
 		driver.get("http://login.salesforce.com");
-		driver.findElement(By.id("username")).sendKeys("dummy@email.com");
-		driver.findElement(By.name("pw")).sendKeys("123456");
-		// select login button using xpath, click it.
-		driver.findElement(By.xpath("//*[@id='Login']")).click();
+		
+		// xpath format "//tagname[@attribute='value']" 
+		driver.findElement(By.xpath("//*[@type='email']")).sendKeys("dummy@email.com");
+		driver.findElement(By.xpath("//input[@id='password']")).sendKeys("123456");
+		driver.findElement(By.xpath("//input[@value='Log In']")).click();
 		
 		
 	}
