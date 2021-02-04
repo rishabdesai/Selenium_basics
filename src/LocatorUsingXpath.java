@@ -18,10 +18,19 @@ public class LocatorUsingXpath {
 		//open salesforce page, select user email & password, enter dummy value in it.
 		driver.get("http://login.salesforce.com");
 		
-		// xpath format "//tagname[@attribute='value']" 
+		// xpath format "//tagname[@attribute='value']"  or "//*[@attribute='value']" 
 		driver.findElement(By.xpath("//*[@type='email']")).sendKeys("dummy@email.com");
 		driver.findElement(By.xpath("//input[@id='password']")).sendKeys("123456");
 		driver.findElement(By.xpath("//input[@value='Log In']")).click();
+		
+		
+		//open salesforce page, select user email & password, enter dummy value in it.
+				driver.get("http://www.google.com");
+				
+		
+		//using parent-child relationship
+		driver.findElement(By.xpath("//*[@type='email']")).sendKeys("dummy@email.com");
+		
 		
 		
 	}

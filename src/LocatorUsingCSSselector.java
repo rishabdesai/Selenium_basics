@@ -18,7 +18,7 @@ public class LocatorUsingCSSselector {
 		// open salesforce page, select user email & password, enter dummy value in it.
 		driver.get("http://login.salesforce.com");
 
-		// css format "tagname[attribute='value']"
+		// css format "tagname[attribute='value']" or "[attribute='value']" 
 		driver.findElement(By.cssSelector("input[name='username']")).sendKeys("dummy@email.com");
 		driver.findElement(By.cssSelector("input[name='pw']")).sendKeys("123456");
 		driver.findElement(By.cssSelector("input[name='Login']")).click();
