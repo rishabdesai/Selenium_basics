@@ -24,7 +24,7 @@ public class Demo {
 		System.out.println(driver.getPageSource());
 		
 		//to navigate to another web page
-		driver.get("http://yahoo.com");
+		//driver.get("http://yahoo.com");
 		
 		//to mimic back button of browser
 		//driver.navigate().back();
